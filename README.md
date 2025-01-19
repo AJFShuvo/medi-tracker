@@ -50,7 +50,7 @@ Enjoy exploring and testing your app!
 - Copy and paste the Firebase SDK(use npm) of your project in the FirebaseConfig.jsx
 - Go to Project/Build/Authentication and enable 'email/password' authenticaion. 
 
-( you may skip the Creating folder and file part . if directly copying my project but rest of the sub-steps are mandatory)
+( you may skip the Creating folder and file part . if you're directly copying my project but rest of the sub-steps are mandatory)
 
 ## Notes:    
 - This is a personal learning project. It's intended to demonstrate the application of new technologies in a practical setting.
