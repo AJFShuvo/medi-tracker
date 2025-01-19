@@ -36,6 +36,22 @@ Enjoy exploring and testing your app!
 - Expo CLI  
 - Physical device or emulator  
 - Expo Go app (for Android/iOS)  
+## Firebase Authentication : 
+### Step 1 : Create A firebase Account . 
+- Reference Link on how to create a firebase account : https://youtu.be/fgdpvwEWJ9M?si=l57mkIvv1HJdgb3V 
+### Step 2 : Create A Firebase Project.  
+- Go to Console. 
+- Create Project.  
+- Select Web (There will be IOS and android also) 
+- Register The app(fill up all the required data) 
+### Step 3 : ADD Firebase SDK.  
+- Create a folder at medi-tracker-app directory . 
+- create a file name FirebaseConfig.jsx. 
+- Copy and paste the Firebase SDK(use npm) of your project in the FirebaseConfig.jsx
+- Go to Project/Build/Authentication and enable 'email/password' authenticaion. 
+
+( you may skip the Creating folder and file part . if directly copying my project but rest of the sub-steps are mandatory)
+
 ## Notes:    
 - This is a personal learning project. It's intended to demonstrate the application of new technologies in a practical setting.
 - For further questions, feel free to reach out via email: ajfshuvo98@gmail.com.  
