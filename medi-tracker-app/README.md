@@ -9,8 +9,11 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
    npm install
    ```
-
-2. Start the app
+2. Install Expo Cli Globally 
+   ```bash
+      npm install -g expo-cli
+   ```
+3. Start the app
 
    ```bash
     npx expo start
