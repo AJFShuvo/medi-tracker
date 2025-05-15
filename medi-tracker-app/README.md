@@ -35,6 +35,10 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
+To do AsyncStorage : 
+```bash
+npx expo install @react-native-async-storage/async-storage
+```
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
