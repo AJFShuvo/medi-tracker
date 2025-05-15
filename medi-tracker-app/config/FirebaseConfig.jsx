@@ -1,11 +1,11 @@
-// Import the functions you need from the SDKs you need
+// config/FirebaseConfig.jsx
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import {
+  initializeAuth,
+  getReactNativePersistence,
+} from "firebase/auth";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD0QMrxVvkkEqyuY-zdMelLjpKE4k71ouQ",
   authDomain: "meditracker-9b247.firebaseapp.com",
@@ -16,6 +16,8 @@ const firebaseConfig = {
   measurementId: "G-ZN9NQZVZ01"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth=getAuth(app)
+
+export const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(AsyncStorage),
+});

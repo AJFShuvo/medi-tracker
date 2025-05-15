@@ -1,16 +1,20 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
+// service/Storage.jsx
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export const setLocalStorage = async(key , value)=>{
-    await AsyncStorage.setItem(key,JSON.stringify(value));
-   
-}
+export const setLocalStorage = async (key, value) => {
+  await AsyncStorage.setItem(key, JSON.stringify(value));
+};
 
-export const getLocalStorage = async(key)=>{
+export const getLocalStorage = async (key) => {
+  const result = await AsyncStorage.getItem(key);
+  return JSON.parse(result);
+};
 
-    const result = await AsyncStorage.getItem(key);
-    return JSON.parse(result);
-}
-
-export const RemoveLocalStorage = async()=>{
-    await AsyncStorage.clear();
-}
+// Remove a specific key
+export const removeLocalStorage = async (key) => {
+  try {
+    await AsyncStorage.removeItem(key);
+  } catch (e) {
+    console.error("Error removing local storage key", key, e);
+  }
+};
