@@ -4,5 +4,7 @@ export default {
   SOFT_GREEN: '#A8E6CF',
   GREEN: '#008000',
   COLORBLIND_FRIENDLY: '#E69F00',
-  LIGHT_GREEN: '#90EE90'  // the CSS “lightgreen”
+  LIGHT_GREEN: '#90EE90',  // the CSS “lightgreen”
+  DARK_GRAY: '#8f8f8f',
+  LIGHT_GRAY_BORDER:'#E5E7EB'
 }

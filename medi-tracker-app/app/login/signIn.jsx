@@ -38,7 +38,7 @@ export default function SignIn() {
       .then(async (userCredential) => {
         const user = userCredential.user;
         // Persist user locally
-        await setLocalStorage("userDetail", user);
+        await setLocalStorage('userDetail', user);
         // Navigate into tabs
         router.replace("/");
       })

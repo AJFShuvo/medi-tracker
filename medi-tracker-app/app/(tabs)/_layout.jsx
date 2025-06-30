@@ -1,26 +1,23 @@
 // app/(tabs)/_layout.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, useRouter } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {onAuthStateChanged } from "firebase/auth";
 import {auth} from '../../config/FirebaseConfig';
+import { getLocalStorage } from "../../service/Storage";
 export default function TabLayout() {
   const router = useRouter();
-  //if user login or not 
-    onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/auth.user
-    const uid = user.uid;
-    console.log(uid);
-    // ...
-  } else {
-    // User is signed out
-    router.push('/login');
-    // ...
-  }
-});
 
+  useEffect(()=>{
+    GetuserDetail();
+  },[])
+
+  const GetuserDetail =async ()=>{
+    const userInfo = await getLocalStorage('userDetail');
+    if(!userInfo){
+      router.replace('/login');
+    }
+  }
 
   return (
     <Tabs screenOptions={{ headerShown: false }}>
