@@ -18,8 +18,11 @@ import { setLocalStorage } from "../../service/Storage";
 import Colors from "../../constant/Colors";
 
 export default function SignIn() {
+
   const router = useRouter();
+  
   const [email, setEmail] = useState("");
+  
   const [password, setPassword] = useState("");
 
   const OnSignInClick = () => {
