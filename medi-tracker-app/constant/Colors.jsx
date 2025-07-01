@@ -6,5 +6,6 @@ export default {
   COLORBLIND_FRIENDLY: '#E69F00',
   LIGHT_GREEN: '#90EE90',  // the CSS “lightgreen”
   DARK_GRAY: '#8f8f8f',
-  LIGHT_GRAY_BORDER:'#E5E7EB'
+  LIGHT_GRAY_BORDER:'#E5E7EB',
+  LIGHT_PRIMARY: '#62B0FF'
 }
