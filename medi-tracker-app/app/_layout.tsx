@@ -31,6 +31,11 @@ export default function RootLayout() {
       <Stack.Screen name="login/index" />
       <Stack.Screen name="login/signIn" />
       <Stack.Screen name="login/signUp" />
+      <Stack.Screen name="action-modal"
+        options={{
+          presentation:'modal'
+        }}
+      />
     </Stack>
   );
 }
